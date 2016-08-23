@@ -50,7 +50,7 @@ static const NSTimeInterval kAnimationIntervalTransform = 0.2;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:0.24 green:0.25 blue:0.28 alpha:1.0]];
     [self.view addSubview:self.frameView];
     
     UIImageView *imageView = [[UIImageView alloc] init];

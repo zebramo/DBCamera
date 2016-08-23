@@ -25,7 +25,7 @@
         [self setOpaque:NO];
         [self setBackgroundColor:[UIColor clearColor]];
         [self setUserInteractionEnabled:YES];
-        [self.layer setOpacity:.7];
+        [self.layer setOpacity:1.0];
         
         _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
         [_imageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
@@ -45,16 +45,16 @@
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.f);
         
         CGContextRef context = UIGraphicsGetCurrentContext();
-        [[UIColor blackColor] setFill];
+        [[UIColor colorWithRed:0.24 green:0.25 blue:0.28 alpha:1.0] setFill];
         UIRectFill(self.bounds);
         
-        CGContextSetStrokeColorWithColor(context, [[UIColor whiteColor] colorWithAlphaComponent:0.5].CGColor);
+        CGContextSetStrokeColorWithColor(context, [[UIColor whiteColor] colorWithAlphaComponent:1.0].CGColor);
         CGContextStrokeRect(context, cropRect);
         [[UIColor clearColor] setFill];
         UIRectFill(CGRectInset(cropRect, 1, 1));
         
         [_imageView setImage:UIGraphicsGetImageFromCurrentImageContext()];
-        
+        _imageView.userInteractionEnabled =YES;
         UIGraphicsEndImageContext();
     }
 }

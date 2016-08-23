@@ -143,9 +143,9 @@
         [_triggerButton setBackgroundColor:self.tintColor];
         [_triggerButton setImage:[UIImage imageInBundleNamed:@"trigger"] forState:UIControlStateNormal];
         [_triggerButton setFrame:(CGRect){ 0, 0, 66, 66 }];
-        [_triggerButton.layer setCornerRadius:33.0f];
+       // [_triggerButton.layer setCornerRadius:33.0f];
         [_triggerButton setCenter:(CGPoint){ CGRectGetMidX(self.bottomContainerBar.bounds), CGRectGetMidY(self.bottomContainerBar.bounds) }];
-        [_triggerButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+       // [_triggerButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
         [_triggerButton addTarget:self action:@selector(triggerAction:) forControlEvents:UIControlEventTouchUpInside];
     }
 
